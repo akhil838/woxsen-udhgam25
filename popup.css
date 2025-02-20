@@ -1,0 +1,118 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body of the popup */
+  body {
+    width: 300px; /* Increased width from 320px to 400px */
+    min-height: 400px; /* Increased height from 300px to 400px */
+    font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+
+    border-radius: 15px; /* Increased border radius for a softer look */
+    overflow: hidden;
+    
+    position: relative; /* To position flying focus relative to popup */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container for the goal content */
+  #currTask {
+    width: 100%;
+    margin: 20px; /* Increased margin */
+    padding: 25px; /* Increased padding */
+  
+    border-radius: 15px; /* Increased border radius */
+   
+    position: relative; /* To assist with focus positioning */
+    
+    /* Center-align text and inline elements inside the container */
+    text-align: center;
+  }
+  
+  /* Title text */
+  .focus-title {
+    margin-bottom: 15px; /* Increased margin */
+    font-size: 1.5rem; /* Increased font size */
+  }
+  
+  /* Paragraph text */
+  .focus-paragraph {
+    margin-bottom: 15px; /* Increased margin */
+    font-size: 1rem; /* Increased font size */
+  }
+  
+  /* The main focus GIF */
+  .focus-gif {
+    display: block;
+    max-width: 100%;
+    width: 150px; /* Increased width from 150px to 200px */
+    height: auto;
+    margin: 0 auto 20px; /* Increased bottom margin and centered horizontally */
+    border-radius: 10px; /* Increased border radius */
+  }
+  
+  /* Input field */
+  .focus-input {
+      width: 100%;
+     padding: 10px;
+     font-size: 16px;
+     border: 2px solid #4a90e2;
+     border-radius: 25px;
+     outline: none;
+     transition: 0.3s ease;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     margin-bottom:15px
+  }
+.focus-input:hover{
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+            
+}
+  /* Button */
+  .focus-button {
+      background: linear-gradient(135deg, #4a90e2, #007bff);
+      border: none;
+      color: white;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      outline: none;
+  }
+  
+  .focus-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #007bff, #4a90e2);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  .focus-button:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Status message */
+  .focus-status {
+    margin-top: 15px; /* Increased margin */
+    font-size: 1rem; /* Increased font size */
+    font-weight: bold;
+    text-shadow: 1px 1px #faf9f2;
+  }
+  
+  /* Flying focus animation */
+  .focus-fly {
+    position: absolute;
+    z-index: 9999; /* Ensure it appears above all content */
+    width: 150px; /* Same size as the main focus GIF */
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+    pointer-events: none; /* Allow clicks through the flying focus */
+  }
+
+  
